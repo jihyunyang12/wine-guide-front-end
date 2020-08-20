@@ -1,6 +1,24 @@
-<h2>Wine Guide</h2>
-<ul class="wines">
-  <li *ngFor="let wine of wineList">
-    Name: {{wine.name}}, Color: {{wine.color}} 
-  </li>
-</ul>
+<div class="center">
+    <h2>{{title}}</h2>
+</div>
+
+<img class="image" src="assets/wineTypes.PNG">
+
+
+
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let wine of wineList">
+      <mat-card style="margin:2em;">
+        <mat-card-title>{{wine.name}}</mat-card-title>
+        <mat-card-content>
+        <p>Color: {{wine.color}}</p>
+        <p>Taste: {{wine.taste}}</p>
+        <p>Food Pairing: {{wine.foodPairing}}</p>
+        </mat-card-content>
+        <!-- <mat-card-actions>
+          <button mat-button>Edit</button>
+          <button mat-button>Delete</button>
+        </mat-card-actions> -->
+      </mat-card>
+    </div>
+</div>

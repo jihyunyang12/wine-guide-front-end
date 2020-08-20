@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WineListService } from './services/wine-list.service';
 import { DecimalPipe } from '@angular/common';
 import { DatePipe } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DatePipe } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [
     WineListService

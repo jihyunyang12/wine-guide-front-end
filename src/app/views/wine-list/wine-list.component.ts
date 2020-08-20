@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WineListService } from 'src/app/services/wine-list.service';
 
+
 @Component({
   selector: 'app-wine-list',
   templateUrl: './wine-list.component.html',
@@ -8,6 +9,7 @@ import { WineListService } from 'src/app/services/wine-list.service';
 })
 export class WineListComponent implements OnInit {
 
+  title = 'Wine Guide';
   public wineList;
   constructor(private wineListService: WineListService) {
     wineListService.getAll().subscribe(data => {
@@ -15,7 +17,6 @@ export class WineListComponent implements OnInit {
       this.wineList = data;
     });
       
-    
   }
 
   ngOnInit(): void {
